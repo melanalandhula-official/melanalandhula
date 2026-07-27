@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://melanalandhula-official.github.io/melanalandhula/sitemap.xml
