@@ -1,544 +1,70 @@
-/* =====================================
-   MELANALANDHULA VILLAGE WEBSITE
-===================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f5f5f5;
-    color:#222;
-    overflow-x:hidden;
-    line-height:1.7;
-}
-
-/* ===========================
-   NAVBAR
-=========================== */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(139,0,0,.95);
-    backdrop-filter:blur(10px);
-    padding:15px 8%;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-.logo{
-    color:#fff;
-    font-size:28px;
-    font-weight:700;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#FFD700;
-}
-
-#darkBtn{
-    border:none;
-    background:#FFD700;
-    color:#000;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:18px;
-}
-
-/* ===========================
-   HERO SECTION
-=========================== */
-
-.hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("temple4.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-overlay{
-    display:none;
-}
-
-.hero-text{
-    color:white;
-    max-width:850px;
-    padding:20px;
-}
-
-.hero-text h1{
-    font-size:65px;
-    margin-bottom:20px;
-    text-shadow:3px 3px 12px rgba(0,0,0,.6);
-}
-
-.hero-text h2{
-    color:#FFD700;
-    font-size:35px;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    font-size:22px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:35px;
-    background:#FFD700;
-    color:#000;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:white;
-    transform:scale(1.05);
-}/* ===========================
-   ABOUT SECTION
-=========================== */
-
-#about{
-    padding:100px 10%;
-    background:#ffffff;
-    text-align:center;
-}
-
-#about h2{
-    font-size:42px;
-    color:#8B0000;
-    margin-bottom:30px;
-}
-
-.about-content{
-    max-width:900px;
-    margin:auto;
-}
-
-.about-content p{
-    font-size:20px;
-    line-height:2;
-    color:#444;
-}
-
-/* ===========================
-   STATISTICS
-=========================== */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    padding:80px 10%;
-    background:#f5f5f5;
-}
-
-.card{
-    background:#fff;
-    padding:35px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h2{
-    color:#8B0000;
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.card p{
-    font-size:18px;
-}
-
-/* ===========================
-   TEMPLE SECTION
-=========================== */
-
-#temple{
-    padding:100px 10%;
-    background:#ffffff;
-}
-
-#temple h2{
-    text-align:center;
-    font-size:42px;
-    color:#8B0000;
-    margin-bottom:50px;
-}
-
-.temple-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-.temple-card{
-    background:#fff;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.temple-card:hover{
-    transform:translateY(-10px);
-}
-
-.temple-card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
-
-.temple-card h3{
-    color:#8B0000;
-    padding:20px 20px 10px;
-}
-
-.temple-card p{
-    padding:0 20px 25px;
-    line-height:1.8;
-}/* ===========================
-   FESTIVAL SECTION
-=========================== */
-
-#festival{
-    padding:100px 10%;
-    background:#f8f8f8;
-}
-
-#festival h2{
-    text-align:center;
-    font-size:42px;
-    color:#8B0000;
-    margin-bottom:50px;
-}
-
-.festival-box{
-    background:#fff;
-    padding:25px;
-    margin-bottom:25px;
-    border-left:6px solid #8B0000;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.festival-box h3{
-    color:#8B0000;
-    margin-bottom:12px;
-    font-size:28px;
-}
-
-.festival-box p{
-    font-size:18px;
-    line-height:1.8;
-}
-
-/* ===========================
-   GALLERY
-=========================== */
-
-#gallery{
-    padding:100px 10%;
-    background:#ffffff;
-}
-
-#gallery h2{
-    text-align:center;
-    font-size:42px;
-    color:#8B0000;
-    margin-bottom:40px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.gallery img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:15px;
-    cursor:pointer;
-    transition:.4s;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-/* ===========================
-   SCHOOL
-=========================== */
-
-#school{
-    padding:100px 10%;
-    text-align:center;
-    background:#f5f5f5;
-}
-
-#school h2{
-    color:#8B0000;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-#school p{
-    font-size:20px;
-    line-height:1.8;
-}
-
-/* ===========================
-   LOCATION
-=========================== */
-
-#location{
-    padding:100px 10%;
-    background:#ffffff;
-    text-align:center;
-}
-
-#location h2{
-    color:#8B0000;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-#location p{
-    font-size:20px;
-    margin-bottom:30px;
-}/* ===========================
-   CONTACT
-=========================== */
-
-#contact{
-    padding:100px 10%;
-    background:#f8f8f8;
-    text-align:center;
-}
-
-#contact h2{
-    color:#8B0000;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-#contact p{
-    font-size:20px;
-    line-height:2;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-    background:#8B0000;
-    color:white;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer h3{
-    margin-bottom:15px;
-    font-size:28px;
-}
-
-footer p{
-    margin:8px 0;
-}
-
-/* ===========================
-   LIGHTBOX
-=========================== */
-
-#lightbox{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.9);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-#lightbox img{
-    max-width:90%;
-    max-height:90%;
-    border-radius:10px;
-}
-
-#close{
-    position:absolute;
-    top:25px;
-    right:40px;
-    font-size:50px;
-    color:white;
-    cursor:pointer;
-}
-
-/* ===========================
-   SCROLL TO TOP
-=========================== */
-
-#topBtn{
-    display:none;
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#8B0000;
-    color:white;
-    border:none;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:22px;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-}
-
-#topBtn:hover{
-    background:#FFD700;
-    color:black;
-}
-
-/* ===========================
-   DARK MODE
-=========================== */
-
-body.dark{
-    background:#121212;
-    color:white;
-}
-
-body.dark section{
-    background:#1c1c1c !important;
-}
-
-body.dark .card,
-body.dark .temple-card,
-body.dark .festival-box{
-    background:#2a2a2a;
-    color:white;
-}
-
-body.dark footer{
-    background:#000;
-}
-
-body.dark h2,
-body.dark h3{
-    color:#FFD700;
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-    padding:15px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    margin:15px 0;
-}
-
-nav ul li{
-    margin:8px;
-}
-
-.hero-text h1{
-    font-size:38px;
-}
-
-.hero-text h2{
-    font-size:24px;
-}
-
-.hero-text p{
-    font-size:18px;
-}
-
-#about h2,
-#temple h2,
-#festival h2,
-#gallery h2,
-#school h2,
-#location h2,
-#contact h2{
-    font-size:32px;
-}
-
-.gallery{
-    grid-template-columns:1fr;
-}
-
-.temple-container{
-    grid-template-columns:1fr;
-}
-
-.stats{
-    grid-template-columns:1fr;
-}
-
-}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--forest:#173f2b;--forest2:#0e2b1d;--cream:#f6f3eb;--paper:#fffdf8;--gold:#d7a84c;--ink:#17231c;--muted:#68736c;--line:#e4e2da;--shadow:0 22px 60px rgba(20,35,27,.10)}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope","Noto Sans Tamil",sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;overflow-x:hidden}
+body.dark{--paper:#101612;--cream:#151c17;--ink:#eef3ee;--muted:#aab5ad;--line:#29332d;--shadow:0 22px 60px rgba(0,0,0,.35);background:#101612}
+img{display:block;max-width:100%}
+button,a{font:inherit}
+a{color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:.3s}
+.site-header.scrolled{padding:8px 0;background:rgba(14,43,29,.94);backdrop-filter:blur(18px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
+.brand-mark{width:43px;height:43px;border:1px solid rgba(255,255,255,.5);border-radius:13px;display:grid;place-items:center;font-weight:800;font-size:20px;background:rgba(255,255,255,.08)}
+.brand strong,.brand small{display:block;line-height:1.15}
+.brand small{font-size:10px;letter-spacing:2px;opacity:.72;margin-top:3px}
+.nav-panel{display:flex;align-items:center;gap:26px;color:#fff}
+.nav-panel a{text-decoration:none;font-size:13px;font-weight:700;opacity:.88;position:relative}
+.nav-panel a:not(.nav-cta):after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--gold);transition:.25s}
+.nav-panel a:hover:after{width:100%}
+.nav-cta{border:1px solid rgba(255,255,255,.35);padding:9px 16px;border-radius:30px}
+.theme-btn,.menu-toggle{border:0;cursor:pointer}
+.theme-btn{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff}
+.menu-toggle{display:none;background:transparent;width:42px}
+.menu-toggle span{display:block;height:2px;background:#fff;margin:6px 0}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,29,19,.83) 0%,rgba(8,29,19,.55) 48%,rgba(8,29,19,.35) 100%),url("temple4.jpg") center/cover;transform:scale(1.02)}
+.hero-content{position:relative;padding-top:100px}
+.eyebrow{font-size:11px;letter-spacing:3px;font-weight:800;opacity:.75;margin-bottom:15px}
+.eyebrow span{display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-right:8px}
+.eyebrow.dark{color:#66746b;opacity:1}
+.hero h1{font-size:clamp(54px,8vw,104px);line-height:.98;letter-spacing:-4px;max-width:900px}
+em{font-style:normal;color:var(--gold)}
+.hero-tamil{font-family:"Noto Sans Tamil",sans-serif;font-size:clamp(16px,2vw,22px);margin:25px 0 5px;font-weight:600}
+.hero-copy{max-width:590px;color:rgba(255,255,255,.78);font-size:16px}
+.hero-actions{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;border-radius:50px;padding:14px 22px;transition:.25s}
+.btn-primary{background:var(--gold);color:#17231c}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(215,168,76,.25)}
+.btn-ghost{border:1px solid rgba(255,255,255,.45);color:#fff}.btn-ghost:hover{background:#fff;color:#173f2b}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:#fff;text-decoration:none;opacity:.7}.scroll-cue span{display:grid;place-items:center;width:38px;height:52px;border:1px solid rgba(255,255,255,.4);border-radius:25px}
+.section{padding:110px 0}.section-small{padding:65px 0}
+.intro{background:var(--paper)}
+.two-col{display:grid;grid-template-columns:.85fr 1.15fr;gap:100px}
+.intro h2,.section-heading h2,.school h2,.contact h2{font-size:clamp(38px,5vw,64px);line-height:1.05;letter-spacing:-2.5px}
+.accent-line{height:3px;width:58px;background:var(--gold);margin-top:25px}
+.prose{font-size:16px;color:var(--muted);max-width:650px}.prose p{margin-bottom:18px}
+.origin-card{display:flex;gap:16px;padding:20px;background:var(--cream);border:1px solid var(--line);border-radius:18px;margin-top:28px}
+.origin-icon{font-size:28px;color:var(--gold)}.origin-card strong{color:var(--ink)}.origin-card p{font-family:"Noto Sans Tamil",sans-serif;font-size:13px;margin:4px 0 0}
+.stats{background:var(--forest);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.stat{padding:10px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.15)}.stat:last-child{border:0}
+.stat strong{font-size:clamp(28px,4vw,45px);display:block;line-height:1.1}.stat strong span{color:var(--gold)}.stat small{opacity:.65;letter-spacing:1px}
+.temples,.gallery-section,.contact{background:var(--paper)}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:50px}.section-heading>p{max-width:390px;color:var(--muted);font-size:14px}
+.temple-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.temple-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:.35s}.temple-card:hover{transform:translateY(-8px)}
+.card-image{height:290px;position:relative;overflow:hidden}.card-image img{width:100%;height:100%;object-fit:cover;transition:.5s}.temple-card:hover img{transform:scale(1.05)}
+.card-image span{position:absolute;bottom:14px;left:14px;background:rgba(14,43,29,.9);color:#fff;border-radius:30px;padding:6px 11px;font-size:10px;font-weight:800;letter-spacing:1px}
+.card-body{padding:24px}.card-kicker,.festival-month{font-size:10px;letter-spacing:2px;font-weight:800;color:var(--gold)}.card-body h3{font-size:21px;line-height:1.25;margin:8px 0 12px}.card-body p:last-child{font-size:13px;color:var(--muted)}
+.festival{background:var(--forest);color:#fff}.section-heading.light>p{color:rgba(255,255,255,.65)}
+.festival-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.festival-card{border:1px solid rgba(255,255,255,.14);padding:28px;border-radius:20px;background:rgba(255,255,255,.045);display:flex;gap:22px}.festival-number{font-size:28px;color:var(--gold);font-weight:800}.festival-card h3{font-size:25px;margin:4px 0 10px}.festival-card p:last-child{font-size:13px;color:rgba(255,255,255,.67)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}.gallery-item{border:0;padding:0;background:none;overflow:hidden;border-radius:16px;cursor:pointer}.gallery-item.large{grid-column:span 2;grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.45s}.gallery-item:hover img{transform:scale(1.05);filter:saturate(1.1)}
+.school{background:var(--cream)}.school-wrap{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}.school-image{height:530px;position:relative}.school-image img{width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}.school-badge{position:absolute;right:-20px;bottom:30px;background:var(--gold);color:#173f2b;border-radius:18px;padding:14px 19px;font-size:9px;letter-spacing:2px;font-weight:800}.school-badge strong{font-size:30px;line-height:1}.school-copy>p:not(.eyebrow):not(.tamil-note){color:var(--muted);margin-top:22px}.tamil-note{font-family:"Noto Sans Tamil";margin-top:24px;font-weight:700;color:var(--forest)}
+.location{background:var(--forest);color:#fff}.location-card{display:flex;align-items:center;justify-content:space-between;gap:40px}.location-card h2{font-size:clamp(35px,5vw,60px);line-height:1.05;letter-spacing:-2px}.location-card p:last-child{max-width:700px;color:rgba(255,255,255,.65);margin-top:14px;font-size:13px}.btn-light{background:#fff;color:var(--forest);white-space:nowrap}.btn-light:hover{transform:translateY(-3px)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}.contact-panel{background:var(--cream);padding:35px;border:1px solid var(--line);border-radius:22px}.contact-panel>p{color:var(--muted);margin-bottom:22px}.social-link{display:flex;align-items:center;justify-content:space-between;text-decoration:none;border:1px solid var(--line);padding:14px 17px;border-radius:13px;font-weight:800}.social-link span{font-size:24px;color:#d62976}.social-link b{color:var(--gold)}
+footer{background:#0a2116;color:#fff;padding:42px 0 20px}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}.footer-links{display:flex;gap:24px}.footer-links a{text-decoration:none;font-size:12px;opacity:.7}.footer-bottom{display:flex;justify-content:space-between;padding-top:18px;font-size:11px;opacity:.5}
+.lightbox{position:fixed;inset:0;background:rgba(3,10,7,.95);z-index:3000;display:none;align-items:center;justify-content:center;padding:30px}.lightbox.open{display:flex}.lightbox figure{max-width:min(1000px,88vw);max-height:90vh}.lightbox img{max-height:82vh;max-width:88vw;border-radius:12px}.lightbox figcaption{color:#fff;text-align:center;margin-top:10px;font-size:13px}.lightbox button{position:absolute;border:0;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;border-radius:50%;width:48px;height:48px;font-size:30px}.lightbox-close{top:24px;right:24px}.lightbox-prev{left:24px;top:50%;transform:translateY(-50%)}.lightbox-next{right:24px;top:50%;transform:translateY(-50%)}
+.top-btn{position:fixed;right:22px;bottom:22px;width:45px;height:45px;border:0;border-radius:50%;background:var(--gold);color:var(--forest);font-weight:800;cursor:pointer;display:none;z-index:900}.top-btn.show{display:block}
+@media(max-width:900px){.nav-panel{gap:15px}.nav-panel a{font-size:11px}.two-col,.school-wrap,.contact-grid{grid-template-columns:1fr;gap:45px}.temple-grid,.festival-grid{grid-template-columns:1fr 1fr}.school-image{height:430px}.location-card{align-items:flex-start;flex-direction:column}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.site-header{padding:11px 0}.menu-toggle{display:block}.nav-panel{position:absolute;top:67px;left:4%;right:4%;display:none;flex-direction:column;align-items:stretch;gap:0;padding:12px;background:rgba(14,43,29,.98);border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.nav-panel.open{display:flex}.nav-panel a{padding:11px 12px;font-size:13px}.nav-panel a:not(.nav-cta):after{display:none}.nav-cta{text-align:center;margin:6px 0}.theme-btn{align-self:center;margin:7px}.hero h1{letter-spacing:-2px}.hero-content{padding-top:80px}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:18px 8px}.stat:nth-child(2){border:0}.section{padding:75px 0}.section-heading{display:block}.section-heading>p{margin-top:15px}.temple-grid,.festival-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:145px}.gallery-item.large{grid-column:span 2}.school-image{height:360px}.school-badge{right:10px}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start}.footer-links{flex-wrap:wrap;gap:13px}.lightbox-prev{left:10px}.lightbox-next{right:10px}.lightbox-close{right:12px}.lightbox{padding:15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}

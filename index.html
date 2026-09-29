@@ -1,382 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Melanalandhula Village</title>
-
-<link rel="stylesheet" href="style.css">
-
+<meta name="description" content="Melanalandhula Village — culture, temples, festivals, school, gallery and village information from Tenkasi District, Tamil Nadu.">
+<meta name="theme-color" content="#173f2b">
+<title>Melanalandhula | மேலநாலந்துலா Village</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav container">
+    <a class="brand" href="#home" aria-label="Melanalandhula home">
+      <span class="brand-mark">M</span>
+      <span><strong>Melanalandhula</strong><small>மேலநாலந்துலா</small></span>
+    </a>
 
-<header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-<nav>
-
-<div class="logo">
-🌿 Melanalandhula
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#temple">Temple</a></li>
-
-<li><a href="#festival">Festival</a></li>
-
-<li><a href="#gallery">Gallery</a></li>
-
-<li><a href="#school">School</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<button id="darkBtn">🌙</button>
-
-</nav>
-
+    <div class="nav-panel" id="navPanel">
+      <a href="#about">About</a>
+      <a href="#temples">Temples</a>
+      <a href="#festivals">Festivals</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#school">School</a>
+      <a href="#location">Location</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button id="themeBtn" class="theme-btn" aria-label="Toggle dark mode">☼</button>
+    </div>
+  </nav>
 </header>
 
-<!-- =========================
-     HERO SECTION
-========================= -->
-
-<section id="home" class="hero">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-text">
-
-<h1>
-🌿 Welcome to Melanalandhula 🌿
-</h1>
-
-<h2>
-Tenkasi District, Tamil Nadu
-</h2>
-
-<p>
-
-A peaceful village filled with culture,
-tradition, unity and spirituality.
-
-</p>
-
-<a href="#about" class="btn">
-
-Explore Our Village
-
-</a>
-
-</div>
-
-</section>
-<!-- =========================
-     ABOUT SECTION
-========================= -->
-
-<section id="about">
-
-<h2>About Melanalandhula</h2>
-
-<div class="about-content">
-
-<p>
-
-Melanalandhula is a peaceful village situated in
-Nalandula Panchayat,
-Kuruvikulam Union,
-Thiruvengadam Taluk,
-Tenkasi District,
-Tamil Nadu.
-
-The village is well known for its culture,
-unity, agriculture and religious harmony.
-
-
-“ மேலநாலாந்துலா "என்ற பெயர் இவ்வூரில் உள்ள கிணற்றின் தனித்துவமான அமைப்பிலிருந்து உருவானது. அந்தக் கிணற்றில் நான்கு பக்கங்களிலும் துலாக்கள் அமைக்கப்பட்டு, நான்கு திசைகளிலிருந்தும் தண்ணீர் இறைத்தனர். இந்தச் சிறப்பம்சமே இவ்வூருக்கு “ மேலநாலாந்துலா " என்ற பெயர் வரக் காரணமாகக் கருதப்படுகிறது.
-
-</p>
-
-</div>
-
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content container">
+    <p class="eyebrow"><span></span> Tenkasi District · Tamil Nadu</p>
+    <h1>Welcome to<br><em>Melanalandhula</em></h1>
+    <p class="hero-tamil">எங்கள் ஊர் · எங்கள் பெருமை · எங்கள் பாரம்பரியம்</p>
+    <p class="hero-copy">A village shaped by tradition, spirituality, agriculture and the strong bonds of its people.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#about">Explore the village <span>→</span></a>
+      <a class="btn btn-ghost" href="#gallery">View gallery</a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll down"><span>↓</span></a>
 </section>
 
-<!-- =========================
-     STATISTICS
-========================= -->
-
-<section class="stats">
-
-<div class="card">
-<h2>250+</h2>
-<p>Houses</p>
-</div>
-
-<div class="card">
-<h2>1000+</h2>
-<p>Population</p>
-</div>
-
-<div class="card">
-<h2>750+</h2>
-<p>Registered Voters</p>
-</div>
-
-<div class="card">
-<h2>628552</h2>
-<p>Pincode</p>
-</div>
-
+<section class="intro section" id="about">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow dark">OUR VILLAGE</p>
+      <h2>A small village with a <em>rich identity.</em></h2>
+      <div class="accent-line"></div>
+    </div>
+    <div class="prose">
+      <p>Melanalandhula is a peaceful village in Nalandula Panchayat, Kuruvikulam Union, Thiruvengadam Taluk, Tenkasi District, Tamil Nadu.</p>
+      <p>Known for its culture, unity, agriculture and religious traditions, the village carries a history that is closely connected to its people and water heritage.</p>
+      <div class="origin-card">
+        <div class="origin-icon">◌</div>
+        <div>
+          <strong>ஊர்ப்பெயரின் சிறப்பு</strong>
+          <p>“மேலநாலந்துலா” என்ற பெயர், நான்கு பக்கங்களிலும் துலாக்கள் அமைந்திருந்த ஒரு தனித்துவமான கிணற்றுடன் தொடர்புடையதாகக் கருதப்படுகிறது.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- =========================
-     TEMPLE SECTION
-========================= -->
-
-<section id="temple">
-
-<h2>Temples of Melanalandhula</h2>
-
-<div class="temple-container">
-
-<div class="temple-card">
-
-<img src="temple1.png" alt="Ayyanar Temple">
-
-<h3>
-Arulmigu Allal Kaththa Ayyanar Temple
-</h3>
-
-<p>
-
-One of the oldest temples in the village.
-
-Festival:
-<b>Panguni Uthiram</b>
-
-</p>
-
-</div>
-
-<div class="temple-card">
-
-<img src="temple4.jpg" alt="Puthamman Temple">
-
-<h3>
-
-Arulmigu Puthamman Kaliyamman Temple
-
-</h3>
-
-<p>
-
-The most important village festival is celebrated
-during the Tamil month of Chithirai.
-
-</p>
-
-</div>
-
-<div class="temple-card">
-
-<img src="temple9.jpg" alt="Onnammal Thottarayar Temple">
-
-<h3>
-
-Arulmigu Shri Onnammal Thottarayar Temple
-
-</h3>
-
-<p>
-
-Another important village festival is celebrated
-during the Tamil month of Masi.
-
-<p> 
-
-</div>
-
-</div>
-
-</section>
-<!-- =========================
-     FESTIVAL SECTION
-========================= -->
-
-<section id="festival">
-
-<h2>Major Festivals</h2>
-
-<div class="festival-box">
-
-<h3>🌸 Chithirai Festival</h3>
-
-<p>
-
-Arulmigu Puthamman Kaliyamman Temple Festival is
-the biggest annual festival celebrated by the
-people of Melanalandhula Village.
-
-</p>
-
-</div>
-
-<div class="festival-box">
-
-<h3>🌼 Panguni Uthiram</h3>
-
-<p>
-
-Arulmigu Allal Kaththa Ayyanar Temple Festival
-is celebrated with great devotion every year.
-
-</p>
-
-</div>
-
+<section class="stats section-small">
+  <div class="container stats-grid">
+    <div class="stat"><strong>250<span>+</span></strong><small>Houses</small></div>
+    <div class="stat"><strong>1000<span>+</span></strong><small>Population</small></div>
+    <div class="stat"><strong>750<span>+</span></strong><small>Registered voters</small></div>
+    <div class="stat"><strong>628552</strong><small>PIN code</small></div>
+  </div>
 </section>
 
-<!-- =========================
-     GALLERY
-========================= -->
-
-<section id="gallery">
-
-<h2>Village Gallery</h2>
-
-<div class="gallery">
-
-<img src="temple1.png" alt="Temple 1">
-
-<img src="temple2.png" alt="Temple 2">
-
-<img src="temple3.png" alt="Temple 3">
-
-<img src="temple4.jpg" alt="Temple 4">
-
-<img src="temple5.webp" alt="Temple 5">
-
-<img src="temple6.png" alt="Temple 6">
-
-<img src="temple7.jpg" alt="Temple 7">
-
-<img src="temple8.jpg" alt="Temple 8">
-
-<img src="school1.png" alt="School 1">
-
-</div>
-
+<section class="section temples" id="temples">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="eyebrow dark">SPIRITUAL HERITAGE</p><h2>Temples of <em>Melanalandhula</em></h2></div>
+      <p>Places of devotion that remain an important part of village life and annual traditions.</p>
+    </div>
+    <div class="temple-grid">
+      <article class="temple-card">
+        <div class="card-image"><img src="temple1.png" alt="Arulmigu Allal Kaththa Ayyanar Temple" loading="lazy"><span>Panguni Uthiram</span></div>
+        <div class="card-body"><p class="card-kicker">TEMPLE 01</p><h3>Arulmigu Allal Kaththa Ayyanar Temple</h3><p>One of the village's traditional places of worship, associated with the annual Panguni Uthiram celebration.</p></div>
+      </article>
+      <article class="temple-card">
+        <div class="card-image"><img src="temple4.jpg" alt="Arulmigu Puthamman Kaliyamman Temple" loading="lazy"><span>Chithirai</span></div>
+        <div class="card-body"><p class="card-kicker">TEMPLE 02</p><h3>Arulmigu Puthamman Kaliyamman Temple</h3><p>A central place for the village's Chithirai festival and a strong part of local spiritual tradition.</p></div>
+      </article>
+      <article class="temple-card">
+        <div class="card-image"><img src="temple9.jpg" alt="Arulmigu Shri Onnammal Thottarayar Temple" loading="lazy"><span>Masi</span></div>
+        <div class="card-body"><p class="card-kicker">TEMPLE 03</p><h3>Arulmigu Shri Onnammal Thottarayar Temple</h3><p>Another important temple in the village, with a festival tradition observed during the Tamil month of Masi.</p></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- =========================
-     SCHOOL
-========================= -->
-
-<section id="school">
-
-<h2>Government School</h2>
-
-<p>
-
-🏫 Panchayat Union Middle School is located in
-Melanalandhula Village and serves the local students.
-
-</p>
-
+<section class="festival section" id="festivals">
+  <div class="container">
+    <div class="section-heading light">
+      <div><p class="eyebrow">VILLAGE TRADITIONS</p><h2>Festivals that bring<br><em>everyone together.</em></h2></div>
+      <p>Celebrations are a time for devotion, family, community and shared memories.</p>
+    </div>
+    <div class="festival-grid">
+      <article class="festival-card"><span class="festival-number">01</span><div><p class="festival-month">TAMIL MONTH · CHITHIRAI</p><h3>Chithirai Festival</h3><p>Arulmigu Puthamman Kaliyamman Temple's annual festival is one of the major celebrations associated with the village.</p></div></article>
+      <article class="festival-card"><span class="festival-number">02</span><div><p class="festival-month">TAMIL MONTH · PANGUNI</p><h3>Panguni Uthiram</h3><p>Arulmigu Allal Kaththa Ayyanar Temple celebrates Panguni Uthiram with devotion and village participation.</p></div></article>
+      <article class="festival-card"><span class="festival-number">03</span><div><p class="festival-month">TAMIL MONTH · MASI</p><h3>Masi Festival</h3><p>Arulmigu Shri Onnammal Thottarayar Temple has its festival tradition during the Tamil month of Masi.</p></div></article>
+    </div>
+  </div>
 </section>
 
-<!-- =========================
-     LOCATION
-========================= -->
-
-<section id="location">
-
-<h2>Village Location</h2>
-
-<p>
-
-Click below to view the location of
-Melanalandhula Village on Google Maps.
-
-</p>
-
-<a class="btn"
-href="https://maps.app.goo.gl/gqeq3D63Gi5jUgni8"
-target="_blank">
-
-📍 View on Google Maps
-
-</a>
-
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="eyebrow dark">VISUAL STORIES</p><h2>Life in <em>our village.</em></h2></div>
+      <p>Explore the places and memories captured around Melanalandhula.</p>
+    </div>
+    <div class="gallery-grid">
+      <button class="gallery-item large" data-src="temple4.jpg" data-title="Melanalandhula"><img src="temple4.jpg" alt="Melanalandhula" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple1.png" data-title="Ayyanar Temple"><img src="temple1.png" alt="Ayyanar Temple" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple2.png" data-title="Village Temple"><img src="temple2.png" alt="Village temple" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple3.png" data-title="Village Temple"><img src="temple3.png" alt="Village temple" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple5.webp" data-title="Village view"><img src="temple5.webp" alt="Village view" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple6.png" data-title="Temple view"><img src="temple6.png" alt="Temple view" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple7.jpg" data-title="Village view"><img src="temple7.jpg" alt="Village view" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple8.jpg" data-title="Village view"><img src="temple8.jpg" alt="Village view" loading="lazy"></button>
+      <button class="gallery-item" data-src="temple9.jpg" data-title="Onnammal Thottarayar Temple"><img src="temple9.jpg" alt="Onnammal Thottarayar Temple" loading="lazy"></button>
+      <button class="gallery-item school-photo" data-src="school1.png" data-title="Panchayat Union Middle School"><img src="school1.png" alt="Panchayat Union Middle School" loading="lazy"></button>
+    </div>
+  </div>
 </section>
 
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>
-
-📍 Melanalandhula Village<br>
-
-Nalandula Panchayat<br>
-
-Kuruvikulam Union<br>
-
-Thiruvengadam Taluk<br>
-
-Tenkasi District - 628552
-
-</p>
-
+<section class="school section" id="school">
+  <div class="container school-wrap">
+    <div class="school-image"><img src="school1.png" alt="Panchayat Union Middle School" loading="lazy"><div class="school-badge">EDUCATION<br><strong>01</strong></div></div>
+    <div class="school-copy"><p class="eyebrow dark">EDUCATION</p><h2>Government school<br>serving <em>our children.</em></h2><div class="accent-line"></div><p>Panchayat Union Middle School is located in Melanalandhula and serves students from the local community.</p><p class="tamil-note">“கல்வியே நம் அடுத்த தலைமுறையின் அடித்தளம்.”</p></div>
+  </div>
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<section class="location section-small" id="location">
+  <div class="container location-card">
+    <div><p class="eyebrow">FIND US</p><h2>Visit <em>Melanalandhula.</em></h2><p>Nalandula Panchayat · Kuruvikulam Union · Thiruvengadam Taluk · Tenkasi District · Tamil Nadu · 628552</p></div>
+    <a class="btn btn-light" href="https://maps.app.goo.gl/gqeq3D63Gi5jUgni8" target="_blank" rel="noopener">Open in Google Maps <span>↗</span></a>
+  </div>
+</section>
+
+<section class="contact section" id="contact">
+  <div class="container contact-grid">
+    <div><p class="eyebrow dark">STAY CONNECTED</p><h2>Melanalandhula,<br><em>always in our hearts.</em></h2></div>
+    <div class="contact-panel">
+      <p>For village updates, photos and community information, follow the official page.</p>
+      <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener"><span>◎</span> Melanalandhula_Official <b>↗</b></a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-
-<h3>🌿 Melanalandhula Village 🌿</h3>
-
-<p>© 2026 All Rights Reserved</p>
-
-<p>Designed with ❤️ by <strong>Melanalandhula_Official</strong></p>
-
+  <div class="container footer-top">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">M</span><span><strong>Melanalandhula</strong><small>மேலநாலந்துலா</small></span></a>
+    <div class="footer-links"><a href="#about">About</a><a href="#temples">Temples</a><a href="#festivals">Festivals</a><a href="#gallery">Gallery</a><a href="#location">Location</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Melanalandhula_Official</span><span>Made with ♥ for our village</span></div>
 </footer>
 
-<button id="topBtn">⬆</button>
-
-<div id="lightbox">
-
-<span id="close">&times;</span>
-
-<img id="lightbox-img" src="" alt="">
-
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+  <figure><img id="lightboxImg" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
 </div>
-
+<button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
 <script src="script.js"></script>
-
 </body>
 </html>

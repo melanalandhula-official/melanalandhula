@@ -1,116 +1,61 @@
-/* ===========================
-   DARK MODE
-=========================== */
+const header=document.getElementById("siteHeader");
+const menuToggle=document.getElementById("menuToggle");
+const navPanel=document.getElementById("navPanel");
+const themeBtn=document.getElementById("themeBtn");
+const topBtn=document.getElementById("topBtn");
 
-const darkBtn = document.getElementById("darkBtn");
+window.addEventListener("scroll",()=>{
+  header.classList.toggle("scrolled",window.scrollY>30);
+  topBtn.classList.toggle("show",window.scrollY>500);
+},{passive:true});
 
-darkBtn.addEventListener("click", () => {
+menuToggle.addEventListener("click",()=>{
+  const open=navPanel.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded",open);
+});
+document.querySelectorAll(".nav-panel a").forEach(a=>a.addEventListener("click",()=>navPanel.classList.remove("open")));
 
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        darkBtn.innerHTML = "☀️";
-    }else{
-        darkBtn.innerHTML = "🌙";
-    }
-
+const savedTheme=localStorage.getItem("melana-theme");
+if(savedTheme==="dark") document.body.classList.add("dark");
+function updateThemeIcon(){themeBtn.textContent=document.body.classList.contains("dark")?"☀":"☼"}
+updateThemeIcon();
+themeBtn.addEventListener("click",()=>{
+  document.body.classList.toggle("dark");
+  localStorage.setItem("melana-theme",document.body.classList.contains("dark")?"dark":"light");
+  updateThemeIcon();
 });
 
+topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 
-/* ===========================
-   GALLERY LIGHTBOX
-=========================== */
+const items=[...document.querySelectorAll(".gallery-item")];
+const lightbox=document.getElementById("lightbox");
+const lbImg=document.getElementById("lightboxImg");
+const lbCaption=document.getElementById("lightboxCaption");
+let current=0;
 
-const galleryImages = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.getElementById("close");
-
-galleryImages.forEach(img => {
-
-    img.addEventListener("click", () => {
-
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-
-    });
-
+function showImage(i){
+  current=(i+items.length)%items.length;
+  const item=items[current];
+  lbImg.src=item.dataset.src;
+  lbImg.alt=item.querySelector("img").alt;
+  lbCaption.textContent=item.dataset.title||"";
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+}
+function closeLightbox(){
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+}
+items.forEach((item,i)=>item.addEventListener("click",()=>showImage(i)));
+document.getElementById("lightboxClose").addEventListener("click",closeLightbox);
+document.getElementById("lightboxPrev").addEventListener("click",()=>showImage(current-1));
+document.getElementById("lightboxNext").addEventListener("click",()=>showImage(current+1));
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener("keydown",e=>{
+  if(!lightbox.classList.contains("open")) return;
+  if(e.key==="Escape") closeLightbox();
+  if(e.key==="ArrowLeft") showImage(current-1);
+  if(e.key==="ArrowRight") showImage(current+1);
 });
-
-closeBtn.addEventListener("click", () => {
-
-    lightbox.style.display = "none";
-
-});
-
-lightbox.addEventListener("click", (e) => {
-
-    if(e.target === lightbox){
-
-        lightbox.style.display = "none";
-
-    }
-
-});
-
-
-/* ===========================
-   SCROLL TO TOP
-=========================== */
-
-const topBtn = document.getElementById("topBtn");
-
-window.onscroll = function(){
-
-    if(document.documentElement.scrollTop > 300){
-
-        topBtn.style.display = "block";
-
-    }else{
-
-        topBtn.style.display = "none";
-
-    }
-
-};
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top:0,
-        behavior:"smooth"
-
-    });
-
-});
-
-
-/* ===========================
-   SMOOTH NAVIGATION
-=========================== */
-
-document.querySelectorAll('nav a').forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if(target){
-
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
-
-    });
-
-});
-
-
-console.log("🌿 Melanalandhula Village Website Loaded Successfully!");
