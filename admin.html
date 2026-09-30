@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melanalandhula Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Manrope,"Noto Sans Tamil",sans-serif;background:#f5f7f4;color:#16251c}button,input,textarea{font:inherit}.wrap{width:min(1050px,92%);margin:auto}.top{background:#123824;color:#fff;padding:22px 0}.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-weight:800}.brand small{display:block;font-weight:500;opacity:.7}.card{background:#fff;border:1px solid #dfe6e0;border-radius:18px;padding:24px;margin:24px 0;box-shadow:0 12px 35px rgba(18,56,36,.08)}h1,h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin:12px 0}.field label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}.field input,.field textarea{width:100%;padding:12px;border:1px solid #ccd7ce;border-radius:11px;outline:none}.field textarea{min-height:120px;resize:vertical}.btn{border:0;border-radius:11px;padding:12px 18px;background:#d7a84c;color:#123824;font-weight:800;cursor:pointer}.btn.secondary{background:#e9eeea}.btn.danger{background:#c94c4c;color:#fff}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.hidden{display:none!important}.msg{padding:12px;border-radius:10px;background:#eef6ef;margin-top:12px}.error{background:#fff0f0;color:#9d2e2e}.preview{max-width:180px;border-radius:12px;margin-top:8px}.item{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;border-top:1px solid #e5ebe6;padding:16px 0}.item img{width:110px;height:80px;object-fit:cover;border-radius:10px}.muted{color:#66736a;font-size:13px}.login{max-width:480px;margin:70px auto}.progress{height:8px;background:#e6ece7;border-radius:20px;overflow:hidden;margin-top:10px}.progress>div{height:100%;width:0;background:#2e7650;transition:.2s}@media(max-width:700px){.grid{grid-template-columns:1fr}.top .wrap{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand">Melanalandhula Admin<small>மேலநாலந்துலா · Website Manager</small></div><button id="logoutBtn" class="btn secondary hidden">Logout</button></div></header>
+<main class="wrap">
+<section id="loginCard" class="card login">
+<h1>Admin Login</h1><p class="muted">Use the admin email and password created in Supabase Authentication.</p>
+<div class="field"><label>Email</label><input id="loginEmail" type="email" autocomplete="username"></div>
+<div class="field"><label>Password</label><input id="loginPassword" type="password" autocomplete="current-password"></div>
+<button id="loginBtn" class="btn">Login</button><div id="loginMsg"></div>
+</section>
+<section id="dashboard" class="hidden">
+<div class="card"><h1>Website updates</h1><p class="muted">Upload photos and publish announcements directly from your phone. Changes appear on the public website after the data is saved.</p></div>
+<div class="card"><h2>📢 New announcement</h2>
+<div class="grid"><div class="field"><label>Title</label><input id="annTitle" placeholder="Village announcement"></div><div class="field"><label>Date</label><input id="annDate" type="date"></div></div>
+<div class="field"><label>Message</label><textarea id="annMessage" placeholder="Write the announcement..."></textarea></div>
+<div class="field"><label>Optional image</label><input id="annImage" type="file" accept="image/*"></div>
+<button id="publishAnn" class="btn">Publish announcement</button><div id="annProgress" class="progress hidden"><div></div></div><div id="annMsg"></div>
+</div>
+<div class="card"><h2>📸 Add gallery photo</h2><div class="grid"><div class="field"><label>Photo title</label><input id="photoTitle" placeholder="Village festival"></div><div class="field"><label>Photo</label><input id="photoFile" type="file" accept="image/*"></div></div><button id="uploadPhoto" class="btn">Upload photo</button><div id="photoProgress" class="progress hidden"><div></div></div><div id="photoMsg"></div></div>
+<div class="card"><h2>Current announcements</h2><div id="annList"><p class="muted">Loading...</p></div></div>
+<div class="card"><h2>Uploaded gallery</h2><div id="galleryList"><p class="muted">Loading...</p></div></div>
+</section>
+</main>
+<script type="module" src="admin.js"></script>
+</body></html>
